@@ -36,15 +36,6 @@ void display( const RandomAccessIterator begin,
     cout << endl;
 }
 
-// Simple fonction swap générique
-template <typename T>
-void ourSwap(T& elem1, T& elem2)
-{
-    T temp = elem1;
-    elem1 = elem2;
-    elem2 = temp;
-}
-
 // selectionSort
 //
 // Effectue le tri par sélection des éléments entre begin
@@ -66,8 +57,8 @@ void selectionSort( RandomAccessIterator begin,
             }
             ++j;
         }
-        ourSwap(*i, *iMin);
-        display(begin, i, iMin, end);
+        swap(*i, *iMin);
+        display(begin, i, iMin, end); // affichage
     }
 }
 
